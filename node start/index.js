@@ -23,7 +23,7 @@ async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
       await listContacts()
-        .then((data) => console.log("contactsList:", data))
+        .then((data) => console.table(data))
         .catch((error) => console.log(error.message));
       break;
     case "get":
